@@ -20,25 +20,25 @@ export class CertificatesController {
   constructor(private readonly certificatesService: CertificatesService) {}
 
   @Post()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async create(@Body() createCertificateDto: CreateCertificateDto) {
     return this.certificatesService.create(createCertificateDto);
   }
 
   @Get()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findAll() {
     return this.certificatesService.findAll();
   }
 
   @Get(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findOne(@Param('id') id: string) {
     return this.certificatesService.findOne(+id);
   }
 
   @Delete(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async remove(@Param('id') id: string) {
     return this.certificatesService.remove(+id);
   }

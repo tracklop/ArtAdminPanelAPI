@@ -3,12 +3,12 @@ import { SaleStatus } from '../../common/interfaces/sale-status.enum';
 
 export class CreateSaleDto {
   @IsInt()
-  readonly paintingId: number;
+  readonly painting_id: number;
 
   @IsInt()
-  readonly clientId: number;
+  readonly client_id: number;
 
-  @IsDecimal()
+  @IsInt()
   readonly amount: number;
 
   @IsEnum(SaleStatus)

@@ -22,31 +22,31 @@ export class SalesController {
   constructor(private readonly salesService: SalesService) {}
 
   @Post()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async create(@Body() createSaleDto: CreateSaleDto) {
     return this.salesService.create(createSaleDto);
   }
 
   @Get()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findAll() {
     return this.salesService.findAll();
   }
 
   @Get(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findOne(@Param('id') id: string) {
     return this.salesService.findOne(+id);
   }
 
   @Put(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async update(@Param('id') id: string, @Body() updateSaleDto: UpdateSaleDto) {
     return this.salesService.update(+id, updateSaleDto);
   }
 
   @Delete(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async remove(@Param('id') id: string) {
     return this.salesService.remove(+id);
   }

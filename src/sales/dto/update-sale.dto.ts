@@ -4,13 +4,13 @@ import { SaleStatus } from '../../common/interfaces/sale-status.enum';
 export class UpdateSaleDto {
   @IsInt()
   @IsOptional()
-  readonly paintingId?: number;
+  readonly painting_id?: number;
 
   @IsInt()
   @IsOptional()
-  readonly clientId?: number;
+  readonly client_id?: number;
 
-  @IsDecimal()
+  @IsInt()
   @IsOptional()
   readonly amount?: number;
 

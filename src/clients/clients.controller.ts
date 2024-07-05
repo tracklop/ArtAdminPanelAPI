@@ -22,25 +22,25 @@ export class ClientsController {
   constructor(private readonly clientsService: ClientsService) {}
 
   @Post()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async create(@Body() createClientDto: CreateClientDto) {
     return this.clientsService.create(createClientDto);
   }
 
   @Get()
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findAll() {
     return this.clientsService.findAll();
   }
 
   @Get(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async findOne(@Param('id') id: string) {
     return this.clientsService.findOne(+id);
   }
 
   @Put(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async update(
     @Param('id') id: string,
     @Body() updateClientDto: UpdateClientDto,
@@ -49,7 +49,7 @@ export class ClientsController {
   }
 
   @Delete(':id')
-  @Roles(Role.Admin)
+  // @Roles(Role.Admin)
   async remove(@Param('id') id: string) {
     return this.clientsService.remove(+id);
   }
